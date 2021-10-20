@@ -14,11 +14,8 @@ Module description goes here
 import os
 import pickle
 import numpy as np
-import pandas as pd
 from sklearn.base import clone
-import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier, VotingClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
@@ -46,7 +43,6 @@ class BuiltClassificators(object):
 
     def produce_data_for_Xvalues(self, Interm_X, Interm_y):
         targets = Interm_y.tolist()
-        import ipdb;ipdb.set_trace();
         f = open("tictac_single_for_X_icon.txt","w+")
         for pos, _array in enumerate(Interm_X):
             line = self._replace(Interm_X[pos].tolist(), 1.0, -1.0)

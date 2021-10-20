@@ -313,12 +313,12 @@ class TicTacToeGame(object):
             _param = dict(knowledge_base=self.knowledge_base)
             return _class(_param) if game_mode in [1, 3] else _class()
 
+
 if __name__ == '__main__':
     # option = prompt_for(
     #    message="Press enter to restart or `q` for exit game: ")
     played_games = 1
     game = TicTacToeGame()
-    while played_games < 50:
+    while played_games < 3:
         game = TicTacToeGame(game_mode=game.game_mode, knowledge_base=game.knowledge_base, choice=game.choice)
         played_games += 1
-    import ipdb; ipdb.set_trace();
